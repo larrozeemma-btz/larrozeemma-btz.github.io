@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emma Larroze, Data Analyst</title>
+<meta name="description" content="Emma Larroze is a data analyst in Los Angeles. Five work samples in SQL, Python, funnel analysis, and growth automation, each framed by the business question it answered.">
+<meta property="og:title" content="Emma Larroze, Data Analyst">
+<meta property="og:description" content="Five business questions answered with SQL, Python, funnel analysis, and growth automation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://larrozeemma-btz.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231F3864'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23F6F7F9' text-anchor='middle'%3EEL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F7F9;
+    --surface: #FFFFFF;
+    --ink: #1F3864;
+    --text: #2B3245;
+    --muted: #5B6478;
+    --link: #2E5EAA;
+    --claret: #8C1C3A;
+    --rule: #D9DDE5;
+    --measure: 64ch;
+    color-scheme: light;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--text);
+    font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+  img { display: block; max-width: 100%; height: auto; }
+
+  .page { max-width: 1120px; margin: 0 auto; padding: 0 1rem; }
+  @media (min-width: 760px) { .page { padding: 0 2.5rem; } }
+
+  /* Header: quiet, so the questions below carry the page */
+  .intro { padding: 4.5rem 0 3.5rem; max-width: var(--measure); }
+  .intro h1 { margin: 0; color: var(--ink); font-size: 1.5rem; font-weight: 700; line-height: 1.2; }
+  .intro .role { margin: 0.15rem 0 1.5rem; color: var(--muted); }
+  .intro .lead { margin: 0 0 1.5rem; color: var(--ink); font-size: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); line-height: 1.4; font-weight: 400; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; padding: 0; list-style: none; font-weight: 500; }
+
+  /* Work: one business question per item */
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .work { list-style: none; margin: 0; padding: 0; }
+  .work > li {
+    display: grid;
+    gap: 1.5rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  @media (min-width: 860px) {
+    .work > li { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 3.5rem; padding: 4rem 0; align-items: start; }
+  }
+  .question {
+    margin: 0 0 1.25rem;
+    color: var(--ink);
+    font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.625rem);
+    line-height: 1.12;
+    font-weight: 600;
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+  }
+  .finding { margin: 0 0 1rem; max-width: var(--measure); color: var(--text); font-size: 1.1875rem; }
+  .finding strong { color: var(--claret); font-weight: 700; }
+  .approach { margin: 0 0 1rem; max-width: var(--measure); }
+  .meta { margin: 0 0 1.25rem; max-width: var(--measure); color: var(--muted); font-size: 1rem; }
+  .meta em { font-style: italic; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; padding: 0; list-style: none; font-weight: 500; }
+
+  .shot { display: block; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; background: var(--surface); }
+  .shot img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+  @media (min-width: 860px) { .shot { margin-top: 0.5rem; } }
+
+  /* About and contact */
+  .closing { display: grid; gap: 2.5rem; padding: 3.5rem 0 4.5rem; border-top: 1px solid var(--rule); }
+  @media (min-width: 860px) { .closing { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 3.5rem; } }
+  .closing h2 { margin: 0 0 0.75rem; color: var(--ink); font-size: 1.25rem; font-weight: 700; }
+  .closing p { margin: 0 0 1rem; max-width: var(--measure); }
+  footer { padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.9375rem; border-top: 1px solid var(--rule); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="intro">
+    <h1>Emma Larroze</h1>
+    <p class="role">Data analyst, Los Angeles</p>
+    <p class="lead">I turn messy business data into decisions people act on. Here are five questions I have answered, and how.</p>
+    <ul class="contact-links">
+      <li><a href="https://www.linkedin.com/in/emma-l-4276a695/">LinkedIn</a></li>
+      <li><a href="https://github.com/larrozeemma-btz">GitHub</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <h2 class="visually-hidden">Selected work</h2>
+    <ol class="work">
+
+      <li>
+        <div>
+          <h3 class="question">Where should a scaling DTC brand double down, and where should it cut?</h3>
+          <p class="finding"><strong>9% of customers, 30% of revenue.</strong> The VIP segment carries the brand, and subscribers are worth 2.1 times as much as one-time buyers, so retention beats more top-of-funnel spend.</p>
+          <p class="approach">I built an 88,000-row, seven-table e-commerce dataset and worked it through cohort retention, lifetime value by segment, acquisition cost by channel, and unit economics, ending in a prioritized 12&#8209;month plan.</p>
+          <p class="meta">Python, pandas, matplotlib, Jupyter. <em>Synthetic data, calibrated to DTC benchmarks.</em></p>
+          <ul class="actions">
+            <li><a href="https://github.com/larrozeemma-btz/vitae-strategic-diagnostic">Read the analysis</a></li>
+          </ul>
+        </div>
+        <a class="shot" href="https://github.com/larrozeemma-btz/vitae-strategic-diagnostic" aria-label="VITAE and Co. analysis on GitHub">
+          <img src="assets/vitae.webp" width="960" height="600" alt="Bar chart comparing each customer segment's share of revenue with its share of customers. VIP Longevity Loyalists are about 9 percent of customers and 30 percent of revenue.">
+        </a>
+      </li>
+
+      <li>
+        <div>
+          <h3 class="question">Which channels, funnel steps, and products really drive revenue at the Google Merchandise Store?</h3>
+          <p class="finding"><strong>76% of carts never reach checkout,</strong> the largest single leak in the funnel. Paid display (CPM) converts at 2.43% while affiliate traffic converts at 0.05%.</p>
+          <p class="approach">Four annotated BigQuery SQL queries on Google's public Analytics sample, each answering one business question: revenue baseline, channel attribution, conversion funnel, and product mix.</p>
+          <p class="meta">SQL, BigQuery. <em>Public Google Analytics sample data, August 2016 to August 2017.</em></p>
+          <ul class="actions">
+            <li><a href="https://github.com/larrozeemma-btz/gms-ecommerce-diagnostic">Read the queries and findings</a></li>
+          </ul>
+        </div>
+        <a class="shot" href="https://github.com/larrozeemma-btz/gms-ecommerce-diagnostic" aria-label="Google Merchandise Store diagnostic on GitHub">
+          <img src="assets/gms.webp" width="960" height="600" alt="Purchase funnel: 445,760 product views, 362,607 add to cart, 88,019 checkouts, 24,532 purchases. 76 percent of carts never reach checkout." loading="lazy">
+        </a>
+      </li>
+
+      <li>
+        <div>
+          <h3 class="question">Why does a brand with 1.45 million customers and strong ad traffic still underconvert?</h3>
+          <p class="finding"><strong>+$84K to +$188K a month, projected,</strong> with no extra ad spend. The problem was conversion architecture, not acquisition.</p>
+          <p class="approach">A full-funnel conversion audit for a DTC barefoot shoe brand: funnel diagnostic, buyer personas, five strategic levers, six quick wins, and an A/B test roadmap.</p>
+          <p class="meta">Funnel analysis, conversion rate optimization, A/B test design, Shopify. <em>Client work delivered through Osmosia.</em></p>
+          <ul class="actions">
+            <li><a href="https://larrozeemma-btz.github.io/hike-footwear-cro-case-study/">Open the case study</a></li>
+            <li><a href="https://github.com/larrozeemma-btz/hike-footwear-cro-case-study">Repository</a></li>
+          </ul>
+        </div>
+        <a class="shot" href="https://larrozeemma-btz.github.io/hike-footwear-cro-case-study/" aria-label="Hike Footwear case study">
+          <img src="assets/hike.webp" width="960" height="600" alt="Opening page of the Hike Footwear case study, titled Healthy Traffic, Unhealthy Conversion." loading="lazy">
+        </a>
+      </li>
+
+      <li>
+        <div>
+          <h3 class="question">Where does a luxury storefront lose its mobile shoppers, and which tests should run first?</h3>
+          <p class="finding"><strong>Four tests, ranked by ICE score.</strong> The roadmap starts with an always-visible mobile add-to-bag bar and a trust layer for shoppers arriving cold from paid social.</p>
+          <p class="approach">An audit of Aesop's UAE Shopify Plus storefront: a walkthrough of six funnel stages, a benchmark against Byredo, Diptyque, and Le Labo, and four fully specified A/B tests.</p>
+          <p class="meta">UX audit, conversion rate optimization, A/B test design, PageSpeed Insights. <em>Independent exercise on the public storefront; uplifts are projections.</em></p>
+          <ul class="actions">
+            <li><a href="https://larrozeemma-btz.github.io/aesop-cro-research-case/">Open the case study</a></li>
+            <li><a href="https://github.com/larrozeemma-btz/aesop-cro-research-case">Repository</a></li>
+          </ul>
+        </div>
+        <a class="shot" href="https://larrozeemma-btz.github.io/aesop-cro-research-case/" aria-label="Aesop UAE case study">
+          <img src="assets/aesop.webp" width="960" height="600" alt="Opening page of the Aesop UAE conversion rate optimization audit." loading="lazy">
+        </a>
+      </li>
+
+      <li>
+        <div>
+          <h3 class="question">How can one analyst run an international B2B prospecting pipeline end to end?</h3>
+          <p class="finding"><strong>One automated flow</strong> from lead capture to booked call to monthly report, so replies pause outreach on their own and no follow-up is sent twice.</p>
+          <p class="approach">The system I designed and ran at MPCI Brazil: LinkedIn Sales Navigator sourcing, email enrichment, outreach sequences segmented by industry and region, Calendly bookings synced to a Notion CRM, and a monthly report with an AI-written summary.</p>
+          <p class="meta">Instantly, Calendly, Notion, Make, Zapier, Claude. <em>Interactive demo with illustrative data.</em></p>
+          <ul class="actions">
+            <li><a href="https://larrozeemma-btz.github.io/mpci-growth-demo/">Try the demo</a></li>
+            <li><a href="https://github.com/larrozeemma-btz/mpci-growth-demo">Repository</a></li>
+          </ul>
+        </div>
+        <a class="shot" href="https://larrozeemma-btz.github.io/mpci-growth-demo/" aria-label="MPCI growth automation demo">
+          <img src="assets/mpci.webp" width="960" height="600" alt="Dashboard of the growth automation demo showing leads generated, reply rate, calls booked, and qualified opportunities." loading="lazy">
+        </a>
+      </li>
+
+    </ol>
+  </main>
+
+  <section class="closing" aria-label="About and contact">
+    <div>
+      <h2>About</h2>
+      <p>I have led growth and data analytics for MPCI in Rio de Janeiro and São Paulo, run e-commerce analytics for more than 80 marketplace sellers from Jakarta, advised consumer brands through my own consultancy, and started out in luxury wine with Baron Philippe de Rothschild in Paris and Gérard Bertrand in Los Angeles.</p>
+      <p>The thread through all of it: find the number that explains the problem, then get the team to act on it. I work in English and French.</p>
+    </div>
+    <div>
+      <h2>Toolkit</h2>
+      <p>SQL and BigQuery, Python (pandas, scikit-learn, matplotlib), R, Tableau, Power BI, Looker Studio, Excel and Google Sheets, GitHub, and LLM tools such as Claude.</p>
+      <h2>Contact</h2>
+      <p>The fastest way to reach me is <a href="https://www.linkedin.com/in/emma-l-4276a695/">LinkedIn</a>.</p>
+    </div>
+  </section>
+
+  <footer>Emma Larroze, 2026</footer>
+</div>
+</body>
+</html>
