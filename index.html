@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Emma Larroze, Data &amp; Business Analyst</title>
-<meta name="description" content="Emma Larroze is a data and business analyst in Los Angeles working across business and revenue operations. Five work samples, each framed by the business question it answered.">
+<meta name="description" content="Emma Larroze is a data and business analyst in Los Angeles working across business and revenue operations. Seven work samples, each framed by the business question it answered.">
 <meta property="og:title" content="Emma Larroze, Data &amp; Business Analyst">
-<meta property="og:description" content="Five business questions answered across revenue operations, data analytics, and business analysis.">
+<meta property="og:description" content="Seven business questions answered across revenue operations, data analytics, and business analysis.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://larrozeemma-btz.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231F3864'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23F6F7F9' text-anchor='middle'%3EEL%3C/text%3E%3C/svg%3E">
@@ -97,7 +97,7 @@
   <header class="intro">
     <h1>Emma Larroze</h1>
     <p class="role">Data and business analyst, Los Angeles</p>
-    <p class="lead">I turn business data into decisions teams act on, across revenue operations, analytics, and cross-functional projects. Here are five questions I have answered, and how.</p>
+    <p class="lead">I turn business data into decisions teams act on, across revenue operations, analytics, and cross-functional projects. Here are seven questions I have answered, and how.</p>
     <ul class="contact-links">
       <li><a href="https://www.linkedin.com/in/emma-l-4276a695/">LinkedIn</a></li>
       <li><a href="https://github.com/larrozeemma-btz">GitHub</a></li>
@@ -126,6 +126,21 @@
 
       <li>
         <div>
+          <h3 class="question">How do you turn a clinic's messy records into a database that cannot contradict itself?</h3>
+          <p class="finding"><strong>Three data anomalies, removed by design.</strong> Each patient's phone number now lives in one place, a visit can be cancelled without losing the patient, and 12 automated checks prove every business rule holds.</p>
+          <p class="approach">I translated the clinic's workflow into four business rules, modeled six entities, normalized the design to Third Normal Form, and built it in SQLite with constraints, sample data, and queries such as a pending-diagnosis worklist and doctor workload.</p>
+          <p class="meta">Business rules, data modeling, SQL, data quality. <em>Team project at Alliant International University with Marina; sample records are fictional.</em></p>
+          <ul class="actions">
+            <li><a href="https://github.com/larrozeemma-btz/clinic-database-design">Read the project</a></li>
+          </ul>
+        </div>
+        <a class="shot" href="https://github.com/larrozeemma-btz/clinic-database-design" aria-label="Clinic database project on GitHub">
+          <img src="assets/clinic.webp" width="960" height="600" alt="Entity relationship diagram linking Patient, Doctor, Appointment, Diagnosis, Prescription, and Medicine." loading="lazy">
+        </a>
+      </li>
+
+      <li>
+        <div>
           <h3 class="question">Where should a scaling business invest, and where should it cut?</h3>
           <p class="finding"><strong>9% of customers, 30% of revenue.</strong> The VIP segment carries the brand, and subscribers are worth 2.1 times as much as one-time buyers, so retention beats more top-of-funnel spend.</p>
           <p class="approach">I built an 88,000-row, seven-table e-commerce dataset and worked it through cohort retention, lifetime value by segment, acquisition cost by channel, and unit economics, ending in a prioritized 12&#8209;month plan.</p>
@@ -136,6 +151,21 @@
         </div>
         <a class="shot" href="https://github.com/larrozeemma-btz/vitae-strategic-diagnostic" aria-label="VITAE and Co. analysis on GitHub">
           <img src="assets/vitae.webp" width="960" height="600" alt="Bar chart comparing each customer segment's share of revenue with its share of customers. VIP Longevity Loyalists are about 9 percent of customers and 30 percent of revenue." loading="lazy">
+        </a>
+      </li>
+
+      <li>
+        <div>
+          <h3 class="question">Why did an AI search over sales data return the wrong rows, and how much better can it get?</h3>
+          <p class="finding"><strong>From 35% to 89% precision.</strong> The data said Bayern while the question said Bavaria, and "10% discount" matched rows with a quantity of 10. Reading the question's conditions before ranking fixed both.</p>
+          <p class="approach">I rebuilt our team's retrieval-augmented generation (RAG) pipeline over a 30,000-row sales table, diagnosed the mismatch, added a constraint-aware retriever, and measured both versions on 60 labelled questions, including the cases the fix still misses.</p>
+          <p class="meta">Python, scikit-learn, retrieval evaluation, root cause analysis. <em>Team project at Alliant International University with Mathilde, Mahika, and Etienne; synthetic data.</em></p>
+          <ul class="actions">
+            <li><a href="https://github.com/larrozeemma-btz/sales-data-rag-pipeline">Read the analysis</a></li>
+          </ul>
+        </div>
+        <a class="shot" href="https://github.com/larrozeemma-btz/sales-data-rag-pipeline" aria-label="Sales data RAG pipeline on GitHub">
+          <img src="assets/rag.webp" width="960" height="600" alt="Bar chart of retrieval precision by question type. TF-IDF alone drops to 0 to 8 percent on questions with discounts or English region names; the constraint-aware retriever reaches 100 percent, and 32 percent on product nicknames." loading="lazy">
         </a>
       </li>
 
